@@ -29,9 +29,10 @@
     border-radius: 2px;
   }
   button {
-    /* background-color: whitesmoke; */
+    background-color: rgb(61, 62, 82);
+    color: white;
     /* border: 0.2px solid grey; */
-    width: 9vw;
+    width: 7.75vw;
     height: 9vh;
     font-size: 3vh;
   }

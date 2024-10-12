@@ -41,9 +41,11 @@ export default function RandomColor() {
         flexDirection: "column",
         color: "#fff",
         textAlign: "center",
+        gap: "5px",
       }}
     >
       <button
+        className="text-black"
         onClick={() => {
           setTypeOfColor("hex");
         }}
@@ -51,6 +53,7 @@ export default function RandomColor() {
         HEX Color
       </button>
       <button
+        className="text-black"
         onClick={() => {
           setTypeOfColor("rgb");
         }}
@@ -58,6 +61,7 @@ export default function RandomColor() {
         RGB Color
       </button>
       <button
+        className="text-black"
         onClick={
           typeOfColor === "hex"
             ? handleRandomColorHEXGenerator
