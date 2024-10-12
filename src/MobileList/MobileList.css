@@ -1,0 +1,21 @@
+.container{
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid grey;
+    border-radius: 5px;
+    gap: 10px;
+    
+    img{
+        max-width: 100px;
+    }
+    .desc{
+        gap: 20px;
+    }
+    button{
+        width: 100px;
+        margin-top: 10px;
+    }
+}

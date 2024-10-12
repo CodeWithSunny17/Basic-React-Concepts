@@ -1,0 +1,13 @@
+.formcontainer {
+    margin-left: 10vw;
+    gap: 20px;
+  
+    div {
+      margin: 10px;
+    }
+  
+    button {
+      width: 100px;
+    }
+  }
+  

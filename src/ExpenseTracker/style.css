@@ -1,0 +1,13 @@
+.expense{
+    margin: 20px;
+
+    button{
+        width: 120px;
+    }
+    ul{
+        li{
+            display: flex;
+            flex-direction: row;
+        }
+    }
+}

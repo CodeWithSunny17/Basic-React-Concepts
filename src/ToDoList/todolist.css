@@ -1,0 +1,15 @@
+
+
+ul{
+    li{
+        margin: 10px;
+    }
+    li:hover{
+        cursor: pointer;
+        color: gray;
+    }
+
+    button{
+        width: 100px;
+    }
+}
