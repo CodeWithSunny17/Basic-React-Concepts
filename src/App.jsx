@@ -12,6 +12,7 @@ import ExpenseTracker from "./ExpenseTracker/ExpenseTracker";
 import RandomColor from "./randomColor/RandomColor";
 import StarRating from "./StarRating/StarRating";
 import Accordion from "./Accordian/Accordian";
+import ImageSlider from "./Image-Slider/ImageSlider";
 
 function App() {
   return (
@@ -54,6 +55,9 @@ function App() {
       </section>
       <section>
         <StarRating />
+      </section>
+      <section>
+        <ImageSlider />
       </section>
     </div>
   );

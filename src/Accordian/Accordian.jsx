@@ -23,6 +23,8 @@ const Accordion = () => {
 
   return (
     <div className="max-w-md mx-auto mt-8">
+      <h1 className="text-center">Accordian</h1>
+      <br />
       {items.map((item, index) => (
         <div className="border-b" key={item.id}>
           <div
