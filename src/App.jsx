@@ -17,7 +17,7 @@ import ImageSlider from "./Image-Slider/ImageSlider";
 function App() {
   return (
     <div className="App">
-      <section>
+      {/* <section>
         <Mobile />
       </section>
       <section>
@@ -55,7 +55,7 @@ function App() {
       </section>
       <section>
         <StarRating />
-      </section>
+      </section> */}
       <section>
         <ImageSlider />
       </section>
