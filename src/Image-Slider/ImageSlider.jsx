@@ -40,7 +40,7 @@ export default function ImageSlider() {
   return (
     <div className="flex gap-2 relative">
       <BsArrowLeftCircleFill
-        className="w-8 h-8"
+        className="w-8 h-8 cursor-pointer"
         onClick={() => {
           setCurrentSlide(
             currentSlide === 0 ? images.length - 1 : currentSlide - 1
@@ -59,7 +59,7 @@ export default function ImageSlider() {
         );
       })}
       <BsArrowRightCircleFill
-        className="w-8 h-8"
+        className="w-8 h-8 cursor-pointer"
         onClick={() => {
           setCurrentSlide(
             currentSlide === images.length - 1 ? 0 : currentSlide + 1

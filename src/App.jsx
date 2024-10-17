@@ -13,6 +13,7 @@ import RandomColor from "./randomColor/RandomColor";
 import StarRating from "./StarRating/StarRating";
 import Accordion from "./Accordian/Accordian";
 import ImageSlider from "./Image-Slider/ImageSlider";
+import LoadMoreItems from "./LoadMoreItems/LoadMoreItems";
 
 function App() {
   return (
@@ -56,8 +57,11 @@ function App() {
       <section>
         <StarRating />
       </section> */}
-      <section>
+      {/* <section>
         <ImageSlider />
+      </section> */}
+      <section>
+        <LoadMoreItems />
       </section>
     </div>
   );
