@@ -60,9 +60,7 @@ function App() {
       {/* <section>
         <ImageSlider />
       </section> */}
-      <section>
-        <LoadMoreItems />
-      </section>
+      <LoadMoreItems />
     </div>
   );
 }

@@ -6,9 +6,9 @@ export default function LoadMoreItems() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [count, setCount] = useState(0);
-  const api = `https://dummyjson.com/products?limit=5&skip=${
-    count === 0 ? 0 : count * 5
-  }&select=title,price`;
+  const api = `https://dummyjson.com/products?limit=20&skip=${
+    count === 0 ? 0 : count * 20
+  }`;
 
   const fetchItems = () => {
     axios
@@ -36,17 +36,28 @@ export default function LoadMoreItems() {
     return <div>Error: {error}</div>;
   }
   return (
-    <div className="flex-col gap-2">
-      {items.length !== 0 &&
-        items.map((item, index) => {
-          return (
-            <li key={index} className="bg-slate-600 mb-2">
-              <h2>{item.title}</h2>
-              <div>{item.price}</div>
-            </li>
-          );
-        })}
+    <div className="flex flex-col mx-4">
+      <div className="flex flex-row flex-wrap gap-4 justify-center ic w-[100%]">
+        {items.length !== 0 &&
+          items.map((item, index) => {
+            return (
+              <div
+                key={index}
+                className="bg-slate-600 w-80 h-60 p-3 rounded-lg"
+              >
+                <h2>{item.title}</h2>
+                <img
+                  className="w-32 h-32 object-contain"
+                  src={item.images[0]}
+                  alt=""
+                />
+                <div>{item.price}</div>
+              </div>
+            );
+          })}
+      </div>
       <button
+        disabled={count >= 4 ? true : false}
         onClick={() => {
           setCount(count + 1);
         }}
