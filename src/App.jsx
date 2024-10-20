@@ -21,41 +21,41 @@ function App() {
     <div className="App">
       {/* <section>
         <Mobile />
-      </section>
-      <section>
+      </section> */}
+      {/* <section>
         <Plusminus />
-      </section>
-      <section>
+      </section> */}
+      {/* <section>
         <Todolist />
-      </section>
-      <section>
+      </section> */}
+      {/* <section>
         <Form />
-      </section>
-      <section>
+      </section> */}
+      {/* <section>
         <Fetch />
-      </section>
-      <section>
+      </section> */}
+      {/* <section>
         <MultipleReturns />
-      </section>
-      <section>
+      </section> */}
+      {/* <section>
         <Form2 />
-      </section>
-      <section>
+      </section> */}
+      {/* <section>
         <Form2UsingUseForm />
-      </section>
-      <section>
+      </section> */}
+      {/* <section>
         <Calculator />
-      </section>
-      <section>
+      </section> */}
+      {/* <section>
         <ExpenseTracker />
-      </section>
-      <section>
+      </section> */}
+      {/* <section>
         <Accordion />
-      </section>
-      <section>
+      </section> */}
+      {/* <section>
         <RandomColor />
-      </section>
-      <section>
+      </section> */}
+      {/* <section>
         <StarRating />
       </section> */}
       {/* <section>

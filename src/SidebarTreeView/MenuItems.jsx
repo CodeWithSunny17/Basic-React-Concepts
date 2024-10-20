@@ -8,7 +8,7 @@ export default function MenuItems({ item }) {
   const handleToggleItems = (id) => {
     setShowItems((prev) => ({
       ...prev,
-      [id]: !prev?.id,
+      [id]: !prev[id],
     }));
   };
   console.log(showItems);
