@@ -14,6 +14,7 @@ import StarRating from "./StarRating/StarRating";
 import Accordion from "./Accordian/Accordian";
 import ImageSlider from "./Image-Slider/ImageSlider";
 import LoadMoreItems from "./LoadMoreItems/LoadMoreItems";
+import SidebarTreeView from "./SidebarTreeView/SidebarTreeView";
 
 function App() {
   return (
@@ -60,7 +61,8 @@ function App() {
       {/* <section>
         <ImageSlider />
       </section> */}
-      <LoadMoreItems />
+      {/* <LoadMoreItems /> */}
+      <SidebarTreeView />
     </div>
   );
 }

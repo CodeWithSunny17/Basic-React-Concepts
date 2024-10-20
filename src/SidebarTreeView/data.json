@@ -1,0 +1,83 @@
+[
+    {
+        "id": 1,
+        "title": "Home",
+        "children": []
+    },
+    {
+        "id": 2,
+        "title": "Projects",
+        "children": [
+            {
+                "id": 21,
+                "title": "Project Alpha",
+                "children": [
+                    {
+                        "id": 211,
+                        "title": "Source Code",
+                        "children": [
+                            {
+                                "id": 2111,
+                                "title": "index.js",
+                                "children": []
+                            },
+                            {
+                                "id": 2112,
+                                "title": "App.js",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": 212,
+                        "title": "Documentation",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "id": 22,
+                "title": "Project Beta",
+                "children": [
+                    {
+                        "id": 221,
+                        "title": "Design",
+                        "children": []
+                    },
+                    {
+                        "id": 222,
+                        "title": "Components",
+                        "children": [
+                            {
+                                "id": 2221,
+                                "title": "Button.js",
+                                "children": []
+                            },
+                            {
+                                "id": 2222,
+                                "title": "Navbar.js",
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Settings",
+        "children": [
+            {
+                "id": 31,
+                "title": "Profile",
+                "children": []
+            },
+            {
+                "id": 32,
+                "title": "Preferences",
+                "children": []
+            }
+        ]
+    }
+]

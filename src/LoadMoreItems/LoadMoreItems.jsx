@@ -36,7 +36,7 @@ export default function LoadMoreItems() {
     return <div>Error: {error}</div>;
   }
   return (
-    <div className="flex flex-col mx-4">
+    <div className="flex flex-col justify-center items-center mx-4 gap-4">
       <div className="flex flex-row flex-wrap gap-4 justify-center ic w-[100%]">
         {items.length !== 0 &&
           items.map((item, index) => {
@@ -57,6 +57,7 @@ export default function LoadMoreItems() {
           })}
       </div>
       <button
+        className="bg-slate-400 w-72"
         disabled={count >= 4 ? true : false}
         onClick={() => {
           setCount(count + 1);
