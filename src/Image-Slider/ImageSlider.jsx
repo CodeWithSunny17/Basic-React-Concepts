@@ -47,17 +47,18 @@ export default function ImageSlider() {
           );
         }}
       />
-      {images?.map((image, index) => {
-        return (
-          <img
-            src={image.download_url}
-            alt="Random"
-            key={image.id}
-            width="400"
-            className={currentSlide === index ? "" : "hidden"}
-          />
-        );
-      })}
+      {images &&
+        images.map((image, index) => {
+          return (
+            <img
+              src={image.download_url}
+              alt="Random"
+              key={image.id}
+              width="400"
+              className={currentSlide === index ? "" : "hidden"}
+            />
+          );
+        })}
       <BsArrowRightCircleFill
         className="w-8 h-8 cursor-pointer"
         onClick={() => {

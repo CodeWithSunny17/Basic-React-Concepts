@@ -62,7 +62,12 @@ function App() {
         <ImageSlider />
       </section> */}
       {/* <LoadMoreItems /> */}
-      <SidebarTreeView />
+      {/* <SidebarTreeView /> */}
+      <ul>
+        <li>fwef</li>
+        <li>efeff</li>
+        <li>wefwf</li>
+      </ul>
     </div>
   );
 }
