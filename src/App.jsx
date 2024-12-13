@@ -15,6 +15,8 @@ import Accordion from "./Accordian/Accordian";
 import ImageSlider from "./Image-Slider/ImageSlider";
 import LoadMoreItems from "./LoadMoreItems/LoadMoreItems";
 import SidebarTreeView from "./SidebarTreeView/SidebarTreeView";
+import GithubProfileFinder from "./Github-profile-tracker/GithubProfileTracker";
+import SearchAutoComplete from "./Search-Auto-Complete-with-API/SearchAutoComplete";
 
 function App() {
   return (
@@ -63,11 +65,8 @@ function App() {
       </section> */}
       {/* <LoadMoreItems /> */}
       {/* <SidebarTreeView /> */}
-      <ul>
-        <li>fwef</li>
-        <li>efeff</li>
-        <li>wefwf</li>
-      </ul>
+      {/* <GithubProfileFinder /> */}
+      <SearchAutoComplete />
     </div>
   );
 }
