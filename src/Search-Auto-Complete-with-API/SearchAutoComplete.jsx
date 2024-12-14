@@ -7,6 +7,7 @@ export default function SearchAutoComplete() {
   const [users, setUsers] = useState([]);
   const [searchParams, setSearchParams] = useState("");
   const [dropDown, setDropDown] = useState(false);
+  const [filteredUsers, setFilteredUsers] = useState([]);
 
   async function searchAC() {
     try {
@@ -16,13 +17,28 @@ export default function SearchAutoComplete() {
       if (data && data.users && data.users.length) {
         console.log(data.users.map((userItem) => userItem.firstName));
         setLoading(false);
-        setUsers(data.users);
+        setUsers(data.users.map((userItem) => userItem.firstName));
       }
     } catch (error) {
       console.log(error);
       setError(error);
     }
   }
+
+  const handleChange = (e) => {
+    const query = e.target.value.toLowerCase();
+    setSearchParams(query);
+    if (query.length > 1) {
+      const filteredData =
+        users && users.length
+          ? users.filter((item) => item.toLowerCase().includes(query) > 0)
+          : [];
+      setFilteredUsers(filteredData);
+      setDropDown(true);
+    } else {
+      setDropDown(false);
+    }
+  };
 
   useEffect(() => {
     searchAC();
@@ -34,6 +50,7 @@ export default function SearchAutoComplete() {
   if (error != null) {
     return <span>{error}</span>;
   }
+  console.log(filteredUsers);
 
   return (
     <div>
@@ -41,10 +58,37 @@ export default function SearchAutoComplete() {
         type="text"
         placeholder="Search..."
         value={searchParams}
-        onChange={(e) => {
-          setSearchParams(e.target.value);
-        }}
+        onChange={handleChange}
+        style={{ width: "200px", padding: "5px" }}
       />
+      {dropDown && (
+        <ul
+          style={{
+            border: "1px solid #ccc",
+            marginTop: "5px",
+            padding: "0",
+            listStyle: "none",
+            width: "200px",
+          }}
+        >
+          {filteredUsers.map((user, index) => (
+            <li
+              key={index}
+              style={{
+                padding: "5px",
+                borderBottom: "1px solid #eee",
+                cursor: "pointer",
+              }}
+              onClick={() => {
+                setSearchParams(user);
+                setDropDown(false);
+              }}
+            >
+              {user}
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }
