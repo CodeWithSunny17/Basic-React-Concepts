@@ -21,48 +21,20 @@ import SearchAutoComplete from "./Search-Auto-Complete-with-API/SearchAutoComple
 function App() {
   return (
     <div className="App">
-      {/* <section>
-        <Mobile />
-      </section> */}
-      {/* <section>
-        <Plusminus />
-      </section> */}
-      {/* <section>
-        <Todolist />
-      </section> */}
-      {/* <section>
-        <Form />
-      </section> */}
-      {/* <section>
-        <Fetch />
-      </section> */}
-      {/* <section>
-        <MultipleReturns />
-      </section> */}
-      {/* <section>
-        <Form2 />
-      </section> */}
-      {/* <section>
-        <Form2UsingUseForm />
-      </section> */}
-      {/* <section>
-        <Calculator />
-      </section> */}
-      {/* <section>
-        <ExpenseTracker />
-      </section> */}
-      {/* <section>
-        <Accordion />
-      </section> */}
-      {/* <section>
-        <RandomColor />
-      </section> */}
-      {/* <section>
-        <StarRating />
-      </section> */}
-      {/* <section>
-        <ImageSlider />
-      </section> */}
+      {/* <Mobile /> */}
+      {/* <Plusminus /> */}
+      {/* <Todolist /> */}
+      {/* <Form /> */}
+      {/* <Fetch /> */}
+      {/* <MultipleReturns /> */}
+      {/* <Form2 /> */}
+      {/* <Form2UsingUseForm /> */}
+      {/* <Calculator /> */}
+      {/* <ExpenseTracker /> */}
+      {/* <Accordion /> */}
+      {/* <RandomColor /> */}
+      {/* <StarRating /> */}
+      {/* <ImageSlider /> */}
       {/* <LoadMoreItems /> */}
       {/* <SidebarTreeView /> */}
       {/* <GithubProfileFinder /> */}

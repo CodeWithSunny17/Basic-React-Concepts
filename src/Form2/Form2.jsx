@@ -44,8 +44,7 @@ export default function Form2() {
     }
     if (!input.age) {
       errors.age = "age is required";
-    }
-    else if (isNaN(input.age) || input.age < 18) {
+    } else if (isNaN(input.age) || input.age < 18) {
       errors.age = "age is invalid";
     }
     if (!input.gender) {
@@ -58,11 +57,11 @@ export default function Form2() {
     e.preventDefault();
 
     const validateErrors = validateForm();
-    
+
     if (Object.keys(validateErrors).length > 0) {
       setErrors(validateErrors);
     } else {
-      setState('Form submitted!')
+      setState("Form submitted!");
       setInput({
         name: "",
         email: "",
@@ -73,11 +72,11 @@ export default function Form2() {
       });
       setErrors({});
     }
-    console.log(errors.age)
+    console.log(errors.age);
   };
 
   return (
-    <div className="formcontainer">
+    <div className="formcontainer min-h-[100vh]">
       <h1>Form2</h1>
       <form action="" onSubmit={handleSubmit}>
         <div>

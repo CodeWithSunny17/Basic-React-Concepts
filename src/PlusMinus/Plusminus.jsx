@@ -13,7 +13,7 @@ export default function Plusminus() {
   };
 
   return (
-    <div className="flex-col justify-center items-center">
+    <div className=" min-h-[100vh] flex-col justify-center items-center">
       <h1>{number}</h1>
       <div>
         <button className="w-10" onClick={handlePlusClick}>

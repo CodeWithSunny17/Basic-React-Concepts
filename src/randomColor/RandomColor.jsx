@@ -44,6 +44,8 @@ export default function RandomColor() {
         gap: "5px",
       }}
     >
+      <h1>Random Color Generator</h1>
+      <br />
       <button
         className="text-black"
         onClick={() => {

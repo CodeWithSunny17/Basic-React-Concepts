@@ -22,7 +22,7 @@ const Accordion = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-8">
+    <div className=" min-h-[100vh] max-w-md mx-auto mt-8">
       <h1 className="text-center">Accordian</h1>
       <br />
       {items.map((item, index) => (

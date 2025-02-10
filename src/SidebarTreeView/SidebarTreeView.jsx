@@ -4,7 +4,9 @@ import data from "./data.json";
 
 export default function SidebarTreeView() {
   return (
-    <div>
+    <div className="min-h-[100vh] flex flex-col justify-center items-center">
+      <h1>Tree View</h1>
+      <br />
       <MenuList menus={data} />
     </div>
   );

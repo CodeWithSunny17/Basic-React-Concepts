@@ -53,7 +53,7 @@ export default function SearchAutoComplete() {
   console.log(filteredUsers);
 
   return (
-    <div>
+    <div className="h-[100vh] flex flex-col justify-center items-center">
       <input
         type="text"
         placeholder="Search..."

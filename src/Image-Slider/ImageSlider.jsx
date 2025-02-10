@@ -38,47 +38,52 @@ export default function ImageSlider() {
   }
 
   return (
-    <div className="flex gap-2 relative">
-      <BsArrowLeftCircleFill
-        className="w-8 h-8 cursor-pointer"
-        onClick={() => {
-          setCurrentSlide(
-            currentSlide === 0 ? images.length - 1 : currentSlide - 1
-          );
-        }}
-      />
-      {images &&
-        images.map((image, index) => {
+    <div className="min-h-[100vh] ">
+      <h1>Image-Slider</h1>
+      <br />
+      <div className="flex gap-2 relative">
+        <BsArrowLeftCircleFill
+          className="w-8 h-8 cursor-pointer"
+          onClick={() => {
+            setCurrentSlide(
+              currentSlide === 0 ? images.length - 1 : currentSlide - 1
+            );
+          }}
+        />
+        {images &&
+          images.map((image, index) => {
+            return (
+              <img
+                src={image.download_url}
+                alt="Random"
+                key={image.id}
+                width="400"
+                className={currentSlide === index ? "" : "hidden"}
+              />
+            );
+          })}
+        <BsArrowRightCircleFill
+          className="w-8 h-8 cursor-pointer"
+          onClick={() => {
+            setCurrentSlide(
+              currentSlide === images.length - 1 ? 0 : currentSlide + 1
+            );
+          }}
+        />
+
+        {images?.map((image, index) => {
           return (
-            <img
-              src={image.download_url}
-              alt="Random"
-              key={image.id}
-              width="400"
-              className={currentSlide === index ? "" : "hidden"}
-            />
+            <span
+              key={index}
+              className={
+                currentSlide === index
+                  ? "w-4 h-4 rounded-full bg-slate-500"
+                  : "w-4 h-4 rounded-full bg-slate-300 "
+              }
+            ></span>
           );
         })}
-      <BsArrowRightCircleFill
-        className="w-8 h-8 cursor-pointer"
-        onClick={() => {
-          setCurrentSlide(
-            currentSlide === images.length - 1 ? 0 : currentSlide + 1
-          );
-        }}
-      />
-
-      {images?.map((image, index) => {
-        return (
-          <span
-            className={
-              currentSlide === index
-                ? "w-4 h-4 rounded-full bg-slate-500"
-                : "w-4 h-4 rounded-full bg-slate-300 "
-            }
-          ></span>
-        );
-      })}
+      </div>
     </div>
   );
 }

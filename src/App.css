@@ -1,7 +1,4 @@
-html{
-  scroll-snap-type: y mandatory; 
-  scroll-behavior: smooth;
-}
+
 
 body{
   margin: 10px;
@@ -12,4 +9,9 @@ body{
 section{
   height: 100vh;
   scroll-snap-align: center;
+}
+
+
+button{
+  background-color: aqua;
 }

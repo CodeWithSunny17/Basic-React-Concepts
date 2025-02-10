@@ -8,8 +8,7 @@ export default function Calculator() {
 
   const calculate = (input) => {
     let result;
-    try{
-
+    try {
       const operators = ["+", "-", "*", "/", "%"];
       let operator = null;
       for (let i = 0; i < input.length; i++) {
@@ -19,24 +18,23 @@ export default function Calculator() {
         }
       }
       const [operand1, operand2] = input.split(operator).map(parseFloat);
-      
+
       if (operator === "+") {
-        result=(operand1 + operand2);
+        result = operand1 + operand2;
       } else if (operator === "-") {
-        result=(operand1 - operand2);
+        result = operand1 - operand2;
       } else if (operator === "*") {
-        result=(operand1 * operand2);
+        result = operand1 * operand2;
       } else if (operator === "/") {
-        result=(operand1 / operand2);
+        result = operand1 / operand2;
       } else if (operator === "%") {
-        result=(operand1 % operand2);
+        result = operand1 % operand2;
       } else {
         throw new Error("invalid operator");
       }
       setInput(result.toString());
-    }
-    catch{
-      setInput('Error')
+    } catch {
+      setInput("Error");
     }
   };
 
@@ -45,19 +43,17 @@ export default function Calculator() {
       setInput("");
     } else if (val === "<") {
       setInput(input.slice(0, -1));
-    } 
-    else if (val === "=") {
+    } else if (val === "=") {
       calculate(input);
-    } 
-    else {
+    } else {
       setInput((prev) => prev + val);
     }
-    
   };
   return (
-    <div className="wrapper">
+    <div className="wrapper min-h-[100vh]">
+      <h1>Calculator</h1>
+      <br />
       <div className="cal">
-
         <h1>{input}</h1>
         <div className="1">
           <button onClick={() => handleClick("C")}>C</button>

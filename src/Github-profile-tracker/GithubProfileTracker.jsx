@@ -41,7 +41,8 @@ export default function GithubProfileFinder() {
   }
 
   return (
-    <div className="flex flex-col">
+    <div className="h-[100vh] flex flex-col justify-center ic">
+      <h1>GitHub Profile Finder</h1>
       <div className="flex flex-row gap-2 py-2">
         <input
           className="w-60"
@@ -56,7 +57,7 @@ export default function GithubProfileFinder() {
       {userData !== null ? (
         <div className="flex flex-col">
           <div>
-            <img src={userData.avatar_url} className="" alt="User" />
+            <img src={userData.avatar_url} className="w-60 h-60" alt="User" />
           </div>
           <div className="">
             <a href={`https://github.com/${userData.login}`}>
