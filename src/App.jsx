@@ -22,24 +22,24 @@ import Notes from "./NoteApp/Notes";
 function App() {
   return (
     <div className="App">
-      {/* <Mobile /> */}
-      {/* <Plusminus /> */}
-      {/* <Todolist /> */}
-      {/* <Form /> */}
-      {/* <Fetch /> */}
-      {/* <MultipleReturns /> */}
-      {/* <Form2 /> */}
-      {/* <Form2UsingUseForm /> */}
-      {/* <Calculator /> */}
-      {/* <ExpenseTracker /> */}
-      {/* <Accordion /> */}
-      {/* <RandomColor /> */}
+      <Mobile />
+      <Plusminus />
+      <Todolist />
+      <Form />
+      <Fetch />
+      <MultipleReturns />
+      <Form2 />
+      <Form2UsingUseForm />
+      <Calculator />
+      <ExpenseTracker />
+      <Accordion />
+      <RandomColor />
       <StarRating />
       <ImageSlider />
-      {/* <LoadMoreItems /> */}
-      {/* <SidebarTreeView /> */}
-      {/* <GithubProfileFinder /> */}
-      {/* <SearchAutoComplete /> */}
+      <LoadMoreItems />
+      <SidebarTreeView />
+      <GithubProfileFinder />
+      <SearchAutoComplete />
       {/* <Notes /> */}
     </div>
   );
