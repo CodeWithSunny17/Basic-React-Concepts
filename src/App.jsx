@@ -17,6 +17,7 @@ import LoadMoreItems from "./LoadMoreItems/LoadMoreItems";
 import SidebarTreeView from "./SidebarTreeView/SidebarTreeView";
 import GithubProfileFinder from "./Github-profile-tracker/GithubProfileTracker";
 import SearchAutoComplete from "./Search-Auto-Complete-with-API/SearchAutoComplete";
+import Notes from "./NoteApp/Notes";
 
 function App() {
   return (
@@ -33,12 +34,13 @@ function App() {
       {/* <ExpenseTracker /> */}
       {/* <Accordion /> */}
       {/* <RandomColor /> */}
-      {/* <StarRating /> */}
-      {/* <ImageSlider /> */}
+      <StarRating />
+      <ImageSlider />
       {/* <LoadMoreItems /> */}
       {/* <SidebarTreeView /> */}
       {/* <GithubProfileFinder /> */}
-      <SearchAutoComplete />
+      {/* <SearchAutoComplete /> */}
+      {/* <Notes /> */}
     </div>
   );
 }
