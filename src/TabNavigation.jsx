@@ -42,7 +42,7 @@ export default function TabNavigation() {
 
   return (
     <div>
-      <h1 className="fixed bottom-0 py-1 px-2 text-lg bg-yellow-300">
+      <h1 className="fixed bottom-0 py-1 px-2 text-md bg-yellow-300">
         Please select any Component to render
       </h1>
       <div className="flex flex-wrap gap-2 justify-center items-center border-b border-gray-300 pt-4 pb-4">
