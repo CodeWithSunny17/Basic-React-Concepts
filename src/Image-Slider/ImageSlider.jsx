@@ -4,7 +4,6 @@ import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 
 export default function ImageSlider() {
   const url = "https://picsum.photos/v2/list?page=2&limit=4";
-  //   const url = data;
   const [images, setImages] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -16,7 +15,6 @@ export default function ImageSlider() {
       .get(getUrl)
       .then((response) => {
         setImages(response.data);
-        console.log(response.data);
         setLoading(false);
       })
       .catch((e) => {
@@ -38,51 +36,49 @@ export default function ImageSlider() {
   }
 
   return (
-    <div className="min-h-[100vh] ">
-      <h1>Image-Slider</h1>
-      <br />
-      <div className="flex gap-2 relative">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-6">
+      <h1 className="text-2xl font-bold mb-4">Image Slider</h1>
+      <div className="relative flex items-center">
         <BsArrowLeftCircleFill
-          className="w-8 h-8 cursor-pointer"
+          className="w-8 h-8 cursor-pointer text-gray-700 hover:text-gray-900"
           onClick={() => {
             setCurrentSlide(
               currentSlide === 0 ? images.length - 1 : currentSlide - 1
             );
           }}
         />
-        {images &&
-          images.map((image, index) => {
-            return (
-              <img
-                src={image.download_url}
-                alt="Random"
-                key={image.id}
-                width="400"
-                className={currentSlide === index ? "" : "hidden"}
-              />
-            );
-          })}
+        {images.map((image, index) => (
+          <img
+            src={image.download_url}
+            alt="Random"
+            key={image.id}
+            className={
+              currentSlide === index
+                ? "w-96 h-64 object-cover rounded-lg mx-4"
+                : "hidden"
+            }
+          />
+        ))}
         <BsArrowRightCircleFill
-          className="w-8 h-8 cursor-pointer"
+          className="w-8 h-8 cursor-pointer text-gray-700 hover:text-gray-900"
           onClick={() => {
             setCurrentSlide(
               currentSlide === images.length - 1 ? 0 : currentSlide + 1
             );
           }}
         />
-
-        {images?.map((image, index) => {
-          return (
-            <span
-              key={index}
-              className={
-                currentSlide === index
-                  ? "w-4 h-4 rounded-full bg-slate-500"
-                  : "w-4 h-4 rounded-full bg-slate-300 "
-              }
-            ></span>
-          );
-        })}
+      </div>
+      <div className="flex mt-4 space-x-2">
+        {images.map((_, index) => (
+          <span
+            key={index}
+            className={
+              currentSlide === index
+                ? "w-4 h-4 rounded-full bg-gray-700"
+                : "w-4 h-4 rounded-full bg-gray-300"
+            }
+          ></span>
+        ))}
       </div>
     </div>
   );

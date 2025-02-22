@@ -1,5 +1,5 @@
 import "./App.css";
-import Mobile from "./MobileList/Mobile";
+
 import Plusminus from "./PlusMinus/Plusminus";
 import Todolist from "./ToDoList/Todolist";
 import Form from "./Form/Form";
@@ -17,12 +17,9 @@ import LoadMoreItems from "./LoadMoreItems/LoadMoreItems";
 import SidebarTreeView from "./SidebarTreeView/SidebarTreeView";
 import GithubProfileFinder from "./Github-profile-tracker/GithubProfileTracker";
 import SearchAutoComplete from "./Search-Auto-Complete-with-API/SearchAutoComplete";
-import Notes from "./NoteApp/Notes";
-
 function App() {
   return (
     <div className="App">
-      <Mobile />
       <Plusminus />
       <Todolist />
       <Form />
@@ -40,7 +37,6 @@ function App() {
       <SidebarTreeView />
       <GithubProfileFinder />
       <SearchAutoComplete />
-      {/* <Notes /> */}
     </div>
   );
 }

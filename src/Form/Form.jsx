@@ -1,34 +1,18 @@
 import React, { useState } from "react";
-import "./form.css";
 
 export default function Form() {
-  // const [name,setName] = useState()
-  // const [email,setEmail] = useState()
-  // const [password,setPassword] = useState()
-
   const [formdata, setFormdata] = useState({
     fullName: "",
     email: "",
     password: "",
   });
 
-  // const handleName = (e) =>{
-  //     setName(e.target.value)
-  // }
-  // const handleEmail = (e) =>{
-  //     setEmail(e.target.value)
-  // }
-  // const handlePassword = (e) =>{
-  //     setPassword(e.target.value)
-  // }
-
-  const handleChnage = (e) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setFormdata({
       ...formdata,
       [name]: value,
     });
-    // console.log(e.target.name)
   };
 
   const handleSubmit = (e) => {
@@ -37,42 +21,40 @@ export default function Form() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className=" min-h-[100vh]">
-      <h1>Form</h1>
-      <br />
-      <label>
-        Name:
+    <form
+      onSubmit={handleSubmit}
+      className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-6"
+    >
+      <h1 className="text-2xl font-bold mb-6">Form</h1>
+      <div className="w-full max-w-md bg-white shadow-lg rounded-lg p-6">
+        <label className="block mb-2 font-medium">Name:</label>
         <input
           type="text"
           name="fullName"
-          onChange={handleChnage}
+          onChange={handleChange}
           value={formdata.fullName}
+          className="w-full p-2 border rounded mb-4"
         />
-        <br />
-        {formdata.fullName}
-      </label>
-      <label>
-        Email:
+        <label className="block mb-2 font-medium">Email:</label>
         <input
           type="email"
           name="email"
-          onChange={handleChnage}
+          onChange={handleChange}
           value={formdata.email}
+          className="w-full p-2 border rounded mb-4"
         />
-        <br />
-        {formdata.email}
-      </label>
-      <label>
-        Password:
+        <label className="block mb-2 font-medium">Password:</label>
         <input
           type="password"
           name="password"
-          onChange={handleChnage}
+          onChange={handleChange}
           value={formdata.password}
+          className="w-full p-2 border rounded mb-4"
         />
-        {formdata.password}
-      </label>
-      <button>Submit</button>
+        <button className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">
+          Submit
+        </button>
+      </div>
     </form>
   );
 }

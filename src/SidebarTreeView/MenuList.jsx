@@ -3,7 +3,7 @@ import MenuItems from "./MenuItems";
 
 export default function MenuList({ menus = [] }) {
   return (
-    <ul className="min-w-48 bg-slate-600 text-white">
+    <ul className="min-w-40 bg-slate-700 text-white rounded-md p-2 shadow-lg">
       {menus &&
         menus.length > 0 &&
         menus.map((item, i) => {

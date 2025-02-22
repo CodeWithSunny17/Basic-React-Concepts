@@ -15,12 +15,10 @@ export default function SearchAutoComplete() {
       const data = await response.json();
 
       if (data && data.users && data.users.length) {
-        console.log(data.users.map((userItem) => userItem.firstName));
         setLoading(false);
         setUsers(data.users.map((userItem) => userItem.firstName));
       }
     } catch (error) {
-      console.log(error);
       setError(error);
     }
   }
@@ -31,7 +29,7 @@ export default function SearchAutoComplete() {
     if (query.length > 1) {
       const filteredData =
         users && users.length
-          ? users.filter((item) => item.toLowerCase().includes(query) > 0)
+          ? users.filter((item) => item.toLowerCase().includes(query))
           : [];
       setFilteredUsers(filteredData);
       setDropDown(true);
@@ -48,37 +46,25 @@ export default function SearchAutoComplete() {
     return <p>Loading...</p>;
   }
   if (error != null) {
-    return <span>{error}</span>;
+    return <span>{error.message}</span>;
   }
-  console.log(filteredUsers);
 
   return (
     <div className="h-[100vh] flex flex-col justify-center items-center">
+      <h1 className="text-2xl mb-10">Search Autocomplete</h1>
       <input
         type="text"
         placeholder="Search..."
         value={searchParams}
         onChange={handleChange}
-        style={{ width: "200px", padding: "5px" }}
+        className="w-52 p-2 border border-gray-300 rounded-md"
       />
       {dropDown && (
-        <ul
-          style={{
-            border: "1px solid #ccc",
-            marginTop: "5px",
-            padding: "0",
-            listStyle: "none",
-            width: "200px",
-          }}
-        >
+        <ul className="border border-gray-300 mt-2 p-0 w-52 bg-white rounded-md shadow-md">
           {filteredUsers.map((user, index) => (
             <li
               key={index}
-              style={{
-                padding: "5px",
-                borderBottom: "1px solid #eee",
-                cursor: "pointer",
-              }}
+              className="p-2 border-b border-gray-200 cursor-pointer hover:bg-gray-100"
               onClick={() => {
                 setSearchParams(user);
                 setDropDown(false);

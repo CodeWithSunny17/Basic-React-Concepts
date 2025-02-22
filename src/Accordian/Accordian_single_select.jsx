@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Accordion = () => {
+const Accordian_single_select = () => {
   const [selectedItems, setSelectedItems] = useState([]);
 
   const items = [
@@ -10,11 +10,11 @@ const Accordion = () => {
   ];
 
   const toggleItem = (id) => {
-    setSelectedItems(
-      selectedItems.includes(id)
-        ? selectedItems.filter((index) => index !== id)
-        : [...selectedItems, id]
-    );
+    if (selectedItems.includes(id)) {
+      setSelectedItems(selectedItems.filter((item) => item !== id));
+    } else {
+      setSelectedItems([...selectedItems, id]);
+    }
   };
 
   return (
@@ -39,4 +39,4 @@ const Accordion = () => {
   );
 };
 
-export default Accordion;
+export default Accordian_single_select;

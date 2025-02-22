@@ -1,8 +1,7 @@
 import React from "react";
-import "./form.css";
 import { useForm } from "react-hook-form";
 
-export default function Form2UsingUseForm() {
+export default function Form() {
   const {
     register,
     watch,
@@ -15,88 +14,90 @@ export default function Form2UsingUseForm() {
   const password = watch("password");
 
   return (
-    <div className="formcontainer min-h-[100vh]">
-      <h1>Form2 using useForm</h1>
-      <form action="" onSubmit={handleSubmit(onSubmit)}>
-        <div>
-          <label htmlFor="">Name: </label>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-6">
+      <h1 className="text-2xl font-bold mb-6">Form using useForm</h1>
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="w-full max-w-md bg-white shadow-lg rounded-lg p-6"
+      >
+        <div className="mb-4">
+          <label className="block font-medium">Name:</label>
           <input
             type="text"
-            name="name"
             {...register("name", { required: "Name is Required" })}
+            className="w-full p-2 border rounded"
           />
-          <div>{errors.name && <span>{errors.name.message}</span>}</div>
+          <div className="text-red-500 text-sm">{errors.name?.message}</div>
         </div>
-        <div>
-          <label htmlFor="">Email: </label>
+        <div className="mb-4">
+          <label className="block font-medium">Email:</label>
           <input
             type="email"
-            name="email"
             {...register("email", {
               required: "Email is Required",
               pattern: { value: /\S+@\S+\.\S+/, message: "Email is invalid" },
             })}
+            className="w-full p-2 border rounded"
           />
-          <div>{errors.email && <span>{errors.email.message}</span>}</div>
+          <div className="text-red-500 text-sm">{errors.email?.message}</div>
         </div>
-        <div>
-          <label htmlFor="">Password: </label>
+        <div className="mb-4">
+          <label className="block font-medium">Password:</label>
           <input
             type="password"
-            name="password"
             {...register("password", {
               required: "Password is Required",
               minLength: {
                 value: 6,
-                message: "Password must be of 6 characters",
+                message: "Password must be at least 6 characters",
               },
             })}
+            className="w-full p-2 border rounded"
           />
-          <div>{errors.password && <span>{errors.password.message}</span>}</div>
+          <div className="text-red-500 text-sm">{errors.password?.message}</div>
         </div>
-        <div>
-          <label htmlFor="">Confirm Password: </label>
+        <div className="mb-4">
+          <label className="block font-medium">Confirm Password:</label>
           <input
             type="password"
-            name="confirmPassword"
             {...register("confirmPassword", {
               required: "Confirm Password is Required",
               validate: (value) =>
-                value === password || "Password did not match",
+                value === password || "Passwords do not match",
             })}
+            className="w-full p-2 border rounded"
           />
-          <div>
-            {errors.confirmPassword && (
-              <span>{errors.confirmPassword.message}</span>
-            )}
+          <div className="text-red-500 text-sm">
+            {errors.confirmPassword?.message}
           </div>
         </div>
-        <div>
-          <label htmlFor="">age: </label>
+        <div className="mb-4">
+          <label className="block font-medium">Age:</label>
           <input
             type="text"
-            name="age"
             {...register("age", {
               required: "Age is Required",
-              validate: (value) => value >= 18 || "Age must be greater than 18",
+              validate: (value) => value >= 18 || "Age must be at least 18",
             })}
+            className="w-full p-2 border rounded"
           />
-          <div>{errors.age && <span>{errors.age.message}</span>}</div>
+          <div className="text-red-500 text-sm">{errors.age?.message}</div>
         </div>
-        <div>
-          <label htmlFor="">gender: </label>
+        <div className="mb-4">
+          <label className="block font-medium">Gender:</label>
           <select
-            name="gender"
             {...register("gender", { required: "Gender is Required" })}
+            className="w-full p-2 border rounded"
           >
             <option value="">Select</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
           </select>
-          <div>{errors.gender && <span>{errors.gender.message}</span>}</div>
+          <div className="text-red-500 text-sm">{errors.gender?.message}</div>
         </div>
-
-        <button>Submit</button>
+        <button className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">
+          Submit
+        </button>
       </form>
     </div>
   );

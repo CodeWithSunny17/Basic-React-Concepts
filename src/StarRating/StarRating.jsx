@@ -1,17 +1,22 @@
 import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
-import "./style.css";
 
 export default function StarRating() {
   const [hover, setHover] = useState(null);
   const [rating, setRating] = useState(null);
+
   const handleClick = (index) => {
     setRating(index);
   };
-  const handleMouseMove = (index) => {
+
+  const handleMouseEnter = (index) => {
     setHover(index);
   };
-  const handleMouseLeave = (index) => {};
+
+  const handleMouseLeave = () => {
+    setHover(null);
+  };
+
   return (
     <div className="flex flex-col justify-center items-center min-h-[100vh]">
       <h1>Star Rating</h1>
@@ -23,13 +28,11 @@ export default function StarRating() {
             <FaStar
               key={index}
               onClick={() => handleClick(index)}
-              onMouseMove={() => handleMouseMove(index)}
-              onMouseLeave={() => handleMouseLeave(index)}
-              className={
-                index <= (hover || rating)
-                  ? "active w-10 h-10"
-                  : "inactive w-10 h-10"
-              }
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={handleMouseLeave}
+              className={`w-10 h-10 cursor-pointer ${
+                index <= (hover || rating) ? "text-yellow-500" : "text-gray-300"
+              }`}
             />
           );
         })}
