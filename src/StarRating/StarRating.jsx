@@ -19,8 +19,8 @@ export default function StarRating() {
 
   return (
     <div className="flex flex-col justify-center items-center min-h-[100vh]">
-      <h1>Star Rating</h1>
-      <br />
+      <h1 className="text-2xl font-bold mb-6">Star Rating</h1>
+
       <div className="flex flex-row">
         {[...Array(6)].map((_, index) => {
           index += 1;
@@ -37,6 +37,7 @@ export default function StarRating() {
           );
         })}
       </div>
+      {rating && <p className="mt-4">{`You gave ${rating} stars!`}</p>}
     </div>
   );
 }

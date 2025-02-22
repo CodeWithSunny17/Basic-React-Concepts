@@ -51,7 +51,7 @@ export default function Calculator() {
   };
   return (
     <div className="wrapper min-h-[100vh]">
-      <h1>Calculator</h1>
+      <h1 className="text-2xl font-bold mb-6">Calculator</h1>
       <br />
       <div className="cal">
         <h1>{input}</h1>
