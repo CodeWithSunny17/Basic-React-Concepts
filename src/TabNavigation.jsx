@@ -16,6 +16,7 @@ import LoadMoreItems from "./LoadMoreItems/LoadMoreItems";
 import SidebarTreeView from "./SidebarTreeView/SidebarTreeView";
 import GithubProfileFinder from "./Github-profile-tracker/GithubProfileTracker";
 import SearchAutoComplete from "./Search-Auto-Complete-with-API/SearchAutoComplete";
+import WeatherApp from "./Weather-app/WeatherApp";
 
 const components = {
   "Sidebar Tree View": <SidebarTreeView />,
@@ -35,6 +36,7 @@ const components = {
   "Image Slider": <ImageSlider />,
   "Load More Items": <LoadMoreItems />,
   "Github Profile Finder": <GithubProfileFinder />,
+  "Weather App": <WeatherApp />,
 };
 
 export default function TabNavigation() {
