@@ -48,7 +48,7 @@ export default function GithubProfileFinder() {
         </button>
       </div>
       {userData && (
-        <div className="flex flex-col items-center mt-6 bg-white p-6 shadow-lg rounded-lg">
+        <div className="flex flex-col gap-1 items-center mt-6 bg-white p-6 shadow-lg rounded-lg">
           <img
             src={userData.avatar_url}
             className="w-40 h-40 rounded-full mb-4"
@@ -60,6 +60,7 @@ export default function GithubProfileFinder() {
           >
             {userData.name || userData.login}
           </a>
+          <h2 className="text-lg text-gray-400">{userData.login}</h2>
           <div className="mt-4 flex flex-row gap-6">
             <div className="text-center">
               <p className="font-semibold">Public Repos</p>
