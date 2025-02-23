@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export default function GithubProfileFinder() {
-  const [userName, setUserName] = useState("sangammukherjee");
+  const [userName, setUserName] = useState("CodeWithSunny17");
   const [userData, setUserData] = useState(null);
   const [loading, setLoading] = useState(true);
 

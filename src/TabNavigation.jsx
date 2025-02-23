@@ -40,7 +40,7 @@ const components = {
 };
 
 export default function TabNavigation() {
-  const [activeTab, setActiveTab] = useState("Sidebar Tree View");
+  const [activeTab, setActiveTab] = useState("Github Profile Finder");
 
   return (
     <div>
